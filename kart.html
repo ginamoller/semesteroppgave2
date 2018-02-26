@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Bergensturer</title>
+  <link rel ="stylesheet" type="text/css" href="css1/index.css">
+  </head>
+<body>
+  <div class= "header">
+  <h1>
+    BERGENSTURER
+  </h1>
+</div>
+  <nav id = "sider">
+    <table style="width:100%">
+      <tr>
+        <th>
+          <a href="http://wildboy.uib.no/~gsa007/oblig/index.html">Hjem</a>
+        </th>
+        <th>
+          <a href="http://wildboy.uib.no/~gsa007/oblig/aktivitet.html">Turer</a>
+        </th>
+        <th>
+          <a href="#">Kart</a>
+        </th>
+      </tr>
+    </table>
+  </nav>
+    <h3>Kart over turer</h3>
+    <center>
+    <div id="map" style="width:600px;height:500px;background:white"></div>
+    <script>
+      function initMap() {
+        var floyen = {lat: 60.398716, lng: 5.345809};
+        var ulriken = {lat: 60.378143, lng: 5.387167};
+        var bergen = {lat: 60.398808, lng: 5.323539};
+        var stoltzekleiven = {lat: 60.412503, lng: 5.335154};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: bergen
+        });
+
+        var marker = new google.maps.Marker({
+          position: floyen,
+          map: map,
+          title: "Fløyen"
+        });
+        var marker = new google.maps.Marker({
+          position: ulriken,
+          map: map,
+          title: "Ulriken"
+        });
+        var marker = new google.maps.Marker({
+          position: stoltzekleiven,
+          map: map,
+          title: "Stoltzekleiven"
+        });
+      }
+    </script>
+  </center>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQILF_hnmtfRlpoaz4rjISk0HQ9-nsqtc&callback=initMap">
+    </script>
+  </body>
+</html>
