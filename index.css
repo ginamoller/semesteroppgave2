@@ -1,0 +1,47 @@
+body{
+  background-color: white;
+}
+
+.header{
+text-align: center;
+}
+.flexmeny{
+
+}
+
+.innhold{
+
+}
+
+.turer{
+  flex-basis: auto;
+}
+
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+p{
+
+}
+
+@media only screen and(max-width: 500px){
+  .flexmeny{
+    width:100%;
+  }
+
+}
+
+
+#map {
+ height: 400px;
+ width: 100%;
+}
